@@ -11,7 +11,6 @@ dotenv.config();
 
 let start_time = "10:04:00 AM";
 let end_time = "10:06:00 AM";
-let extra_time = "10:14:00 AM"
 // let count = 0;
 
 
@@ -161,9 +160,6 @@ app.post("/mark-attendance", async (req, res) => {
   }
   else if (now_time < start_time){
     res.status(400).send("Attendance not yet started")
-  }
-  else if(now_time > extra_time){
-    res.send("Sorry,Time is up!!")
   }
   
 });
