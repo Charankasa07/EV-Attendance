@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .main-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+.main{
+    background-image: linear-gradient(rgb(80, 134, 187),rgb(92, 147, 202),rgb(129, 184, 238));
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    height: 60%;
+    width: 40%;
+    flex-direction: column;
+    box-shadow: 20px 20px 10px rgb(183, 200, 218);
+    border-radius: 15px;
+}
+.container{
+    background-image : linear-gradient(rgb(214, 214, 168),beige);
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.input-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input-form input[type=text]{
+    height: 30px;
+    width: 200px;
+    margin: 20px;
+    border-radius: 8px;
+    border-color: beige;
+    text-align : center;  
+    font-family: 'Courier New', Courier, monospace;  
+}
+
+
+.input-form button{
+    margin-bottom:20px ;
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: rgb(197, 209, 222);
+    font-weight: bold;
+    font-family :'Lucida Sans';
+}
+
+    </style>
+</head>
+<body>
+    <div class="main-main">
+        <div class="main">
+            <h3>Register</h3>
+            <div class="container">
+                <form action="/register" method="post" class="input-form">
+                    <input type="text" placeholder="Name" name="name">
+                    <input type="text" placeholder="Id Number" name="id_number">
+                    <input type="text" name="password" placeholder="Password">
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

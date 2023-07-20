@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attendance</title>
+    <style>
+      table {
+        border-spacing: 10px;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>ID</th>
+          <% dates.forEach(date =>{ %>
+          <th><%= date%></th>
+          <%})%>
+        </tr>
+      </thead>
+      <tbody>
+        <% details.forEach(item =>{%>
+        <tr>
+          <td><%= item.name %></td>
+          <td><%= item.id.toUpperCase()%></td>
+          <!-- <% item['dateArray'].forEach( element => {%>
+                        <td><%= element %></td>
+                    <%})%> -->
+          <% item['attendanceArray'].forEach( element => {%>
+          <td><%= element %></td>
+          <%})%>
+        </tr>
+        <%})%>
+      </tbody>
+    </table>
+    <button onclick="print_window()">Print</button>
+    <script>
+        function print_window(){
+            window.print()
+        }
+    </script>
+  </body>
+</html>
