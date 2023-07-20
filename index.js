@@ -4,7 +4,7 @@ const body_parser = require("body-parser");
 const ejs = require('ejs')
 const cookie_parser = require('cookie-parser')
 const dotenv = require("dotenv");
-const bcrypt = require("bcryptjs");
+const bcrypt = require("bcrypt");
 const attendance = require("./models/attendance");
 const app = express();
 dotenv.config();
