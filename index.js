@@ -171,4 +171,4 @@ app.get('/get-attendance',async ( req ,res )=>{
 })
 
 
-app.listen(process.env.PORT||5500, console.log("Listening on port 5500"));
+app.listen(process.env.PORT || 5500, console.log("Listening on port 5500"));
